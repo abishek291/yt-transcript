@@ -5,10 +5,9 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.errors import HttpError
 from googleapiclient.discovery import build
 from google.auth.transport.requests import Request
-
+from google.oauth2.service_account import Credentials
 import os
 import json
-
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
@@ -54,3 +53,4 @@ def get_transcript(video_id):
 
     transcript = caption_response.decode('utf-8')
     return transcript
+

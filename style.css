@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(to right, rgb(255, 0, 89), rgb(0, 85, 255));
 }
 
 h1, h2 {
