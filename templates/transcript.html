@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Transcript for {{ video_id }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename=style.css') }}">
+
+</head>
+<body>
+    <h1>Transcript for {{ video_id }}</h1>
+    <div id="transcript">
+        {{ transcript|safe }}
+    </div>
+    <div id="summary">
+        <h2>Summary:</h2>
+        <p id="summary-text"></p>
+        <button id="summarize-btn">Summarize</button>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
