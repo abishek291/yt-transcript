@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    if request.method == 'POST':
+    if request.method == 'PUT':
         video_id = request.form['video_id']
         try:
             transcript = get_transcript(video_id)
